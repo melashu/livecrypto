@@ -1,6 +1,5 @@
-/* eslint-disable */
-import { configureStore } from "@reduxjs/toolkit";
-import cryptoreducer from "./cryptoreducer";
+import { configureStore } from '@reduxjs/toolkit';
+import cryptoreducer from './cryptoreducer';
 
 const store = configureStore({
   reducer: {

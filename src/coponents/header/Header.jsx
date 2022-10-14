@@ -1,16 +1,16 @@
-/* eslint-disable */
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
-import SettingsIcon from "@mui/icons-material/Settings";
-import "./header.scss";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+import SettingsIcon from '@mui/icons-material/Settings';
+import './header.scss';
+
 const Header = () => {
   const currentLocation = useLocation();
   return (
     <div className="header">
       <div className="logo-container">
-        {currentLocation.pathname !== "/" && (
+        {currentLocation.pathname !== '/' && (
           <Link to="/" data-testid="backbutton">
             <span>
               <ChevronLeftIcon className="icon" />
@@ -18,7 +18,7 @@ const Header = () => {
           </Link>
         )}
         <Link to="/" className="logo">
-          {" "}
+          {' '}
           <div className="logo">Live Crypto</div>
         </Link>
       </div>

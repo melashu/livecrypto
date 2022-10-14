@@ -1,26 +1,26 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useEffect, useState } from "react";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import { Link } from "react-router-dom";
-import HashLoader from "react-spinners/HashLoader";
-import { SearchRounded } from "@mui/icons-material";
+import React, { useEffect, useState } from 'react';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { Link } from 'react-router-dom';
+import HashLoader from 'react-spinners/HashLoader';
+import { SearchRounded } from '@mui/icons-material';
 import {
   cryptoThunk,
   getCryptoInfo,
   getLoading,
-} from "../../redux/cryptoreducer";
-import { useCryptoDispatch, useCryptoSelector } from "../../coponents/Hook";
-import "./home.scss";
-import crypto from "../../image/crypto.jpg";
+} from '../../redux/cryptoreducer';
+import { useCryptoDispatch, useCryptoSelector } from '../../coponents/Hook';
+import './home.scss';
+import crypto from '../../image/crypto.jpg';
 
 const Home = () => {
   const cryptoList = useCryptoSelector(getCryptoInfo);
   const loading = useCryptoSelector(getLoading);
   const dispatch = useCryptoDispatch();
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filtered = cryptoList.filter((crypto) => {
-    if (searchTerm === "") return crypto;
+    if (searchTerm === '') return crypto;
     if (crypto.name.toLowerCase().includes(searchTerm.toLowerCase())) {
       return crypto;
     }
@@ -42,24 +42,26 @@ const Home = () => {
           <p data-testid="count">{cryptoList.length}</p>
         </div>
       </div>
-      {(loading === "pending" || loading === "idel") && (
+      {(loading === 'pending' || loading === 'idel') && (
         <HashLoader
           loading
           color="#fff"
           size={55}
           data-testid="hashloader"
           cssOverride={{
-            position: "absolute",
-            top: "120%",
-            left: "45%",
+            position: 'absolute',
+            top: '120%',
+            left: '45%',
           }}
           speedMultiplier={1}
         />
-      )}{" "}
-      {loading === "rejected" && (
+      )}
+      {' '}
+      {loading === 'rejected' && (
         <div className={`loading ${loading}`}>Something went wrong...</div>
-      )}{" "}
-      {loading === "success" && (
+      )}
+      {' '}
+      {loading === 'success' && (
         <div className="bottom">
           <h2>Filter Crypto by name</h2>
           <div className="search">
@@ -83,9 +85,18 @@ const Home = () => {
                   className="item"
                 >
                   <div className="item-container">
-                    <p data-testid="cryptoname">Crypto Name: {item.name}</p>
-                    <p>Crypto Symbol: {item.symbol}</p>
-                    <p>Crypto Prices in USD: {item.priceUsd}</p>
+                    <p data-testid="cryptoname">
+                      Crypto Name:
+                      {item.name}
+                    </p>
+                    <p>
+                      Crypto Symbol:
+                      {item.symbol}
+                    </p>
+                    <p>
+                      Crypto Prices in USD:
+                      {item.priceUsd}
+                    </p>
                   </div>
                   <span>
                     <ArrowRightIcon className="icon" />
@@ -95,7 +106,8 @@ const Home = () => {
             ))}
           </div>
         </div>
-      )}{" "}
+      )}
+      {' '}
     </div>
   );
 };

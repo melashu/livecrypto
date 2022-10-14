@@ -6,7 +6,7 @@ const cryptoThunk = createAsyncThunk("cryptoinfo/cryptoThunk", async () => {
       method: "GET",
     });
     const data = await response.json();
-    return data['data'];
+    return data.data;
   } catch (error) {
     return error;
   }
