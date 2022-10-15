@@ -9,9 +9,10 @@ Livecrypto is a real-time crypto pricing predication app by fetch data from Coin
 - JSX
 
 ## Live Demo
-[Live Demo](https://heartfelt-capybara-858cd4.netlify.app/)
+[Live Demo](https://clinquant-kringle-c60d03.netlify.app/)
 
 ## Screenshot 
+![image](https://user-images.githubusercontent.com/30173722/195955778-bab825c5-0d41-4f50-8628-e9281e508f11.png)
 
 ## Getting Started
 ### Prerequisites
