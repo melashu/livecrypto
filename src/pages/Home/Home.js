@@ -62,7 +62,7 @@ const Home = () => {
       {loading === 'success' && (
         <div className="bottom">
           <div className="bottom-top">
-            <h2>Filter Crypto by name</h2>
+            <h2 className="title">Filter Crypto by name</h2>
             <div className="search">
               <input
                 type="search"

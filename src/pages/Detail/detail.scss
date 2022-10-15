@@ -17,10 +17,12 @@
       flex: 1;
       justify-self: end;
       padding: 10px;
+
       img {
         float: right;
         width: $img-width;
         height: $img-height;
+
         @include mobile {
           width: 100%;
           height: 60%;
@@ -79,7 +81,6 @@
         display: flex;
         justify-content: space-between;
 
-
         &:hover {
           transform: scaleX(0.95);
           cursor: pointer;
@@ -90,11 +91,11 @@
         }
 
         &:nth-child(even) {
-          background-color: #3e61a5
+          background-color: #3e61a5;
         }
 
         &:nth-child(odd) {
-          background-color: #4167ae
+          background-color: #4167ae;
         }
       }
 
@@ -109,6 +110,7 @@
       text-transform: uppercase;
       padding: 10px;
       background-color: #35548a;
+
       @include mobile {
         font-size: 20px;
       }
