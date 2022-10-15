@@ -35,7 +35,7 @@ const Home = () => {
           <img src={crypto} alt="crypto" />
         </div>
         <div className="right">
-          <p>Real-time Crypto Prices</p>
+          <h2>Real-time Crypto Prices</h2>
           <p>Total number of Coin </p>
           <p data-testid="count">{cryptoList.length}</p>
         </div>
@@ -61,18 +61,20 @@ const Home = () => {
       {' '}
       {loading === 'success' && (
         <div className="bottom">
-          <h2>Filter Crypto by name</h2>
-          <div className="search">
-            <input
-              type="search"
-              name=""
-              id=""
-              placeholder="Search crypto...."
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-              }}
-            />
-            <SearchRounded className="icon" />
+          <div className="bottom-top">
+            <h2>Filter Crypto by name</h2>
+            <div className="search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search crypto...."
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                }}
+              />
+              <SearchRounded className="icon" />
+            </div>
           </div>
           <ul className="items">
             {filtered.map((item) => (
@@ -85,9 +87,7 @@ const Home = () => {
                   <div className="item-container">
                     <h3 data-testid="cryptoname">{item.name}</h3>
                     <h4>{item.symbol}</h4>
-                    <span>
-                      {item.priceUsd}
-                    </span>
+                    <span>{item.priceUsd}</span>
                   </div>
                   <span>
                     <ArrowRightIcon className="icon" />
