@@ -34,16 +34,20 @@
     .right {
       flex: 1;
       align-self: start;
-      text-align: right;
+      text-align: center;
       padding: 20px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-
+      h2 {
+        @include mobile {
+          font-size: 18px;
+          
+        }
+      }
       p {
         font-size: 20px;
         font-weight: 400;
-
         @include mobile {
           font-size: 13px;
         }
@@ -54,6 +58,12 @@
   .bottom {
     display: flex;
     flex-direction: column;
+    background-color: $primaryColor;
+
+    .bottom-top {
+      background-color: #35548a;
+      padding: 5px;
+    }
 
     @include mobile {
       background-color: $primaryColor;
@@ -117,17 +127,17 @@
         }
 
         @include xs {
-          font-size: 12px;
+          font-size: 13px;
           padding: 5px;
         }
 
         font-size: 20px;
-        border: 2px solid rgba(153, 153, 153, 0.13);
+        border: 0.5px solid rgba(248, 246, 246, 0.753);
         padding: 10px;
-        margin: 3px;
+        margin: 2px;
 
         &:hover {
-          transform: scaleX(0.97);
+          transform: scaleX(0.96);
         }
 
         .item-container {
