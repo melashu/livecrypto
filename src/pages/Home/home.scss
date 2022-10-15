@@ -1,4 +1,3 @@
-/* stylelint-disable */
 @import "../../common.scss";
 
 .home-container {
@@ -26,7 +25,8 @@
 
         @include mobile {
           width: 100%;
-          height: 60%;
+          height: 100%;
+          float: none;
         }
       }
     }
@@ -34,16 +34,19 @@
     .right {
       flex: 1;
       align-self: start;
-      text-align: center;
+      text-align: right;
       padding: 20px;
       display: flex;
       flex-direction: column;
-      border-left: #999 2px solid;
       gap: 12px;
 
       p {
         font-size: 20px;
         font-weight: 400;
+
+        @include mobile {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -51,6 +54,10 @@
   .bottom {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      background-color: $primaryColor;
+    }
 
     h2 {
       text-align: center;
@@ -66,6 +73,12 @@
       border-radius: 50px;
       background-color: $search-bg;
 
+      @include mobile {
+        width: 40%;
+        padding: 5px;
+        height: 45px;
+      }
+
       input {
         padding: 5px;
         outline: none;
@@ -80,24 +93,36 @@
     .items {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      list-style: none;
       padding: 5px;
+
+      @include xs {
+        margin: 10px;
+        font-size: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
 
       .item {
         display: flex;
         justify-content: space-between;
 
-        @include small {
-          font-size: 13px;
-          padding: 5px;
+        @include mobile {
+          display: flex;
+          flex-direction: column-reverse;
+          font-size: 18px;
+          padding: 2px;
+          justify-content: flex-end;
+          align-items: flex-end;
+          row-gap: 44px;
         }
 
-        @include mobile {
-          font-size: 15px;
+        @include xs {
+          font-size: 12px;
           padding: 5px;
         }
 
         font-size: 20px;
-        border: 2px solid #999;
+        border: 2px solid rgba(153, 153, 153, 0.13);
         padding: 10px;
         margin: 3px;
 
@@ -107,12 +132,17 @@
 
         .item-container {
           @include mobile {
-            padding: 5px;
+            padding: 6px;
+            text-align: right;
+            margin: 2px;
           }
+
           padding: 15px;
           margin: 5px;
           text-align: left;
-          p {
+
+          h4,
+          h3 {
             color: $font-primary;
             font-weight: 400;
             margin-bottom: 5px;

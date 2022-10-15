@@ -1,10 +1,10 @@
-/* stylelint-disable */
 @import "../../common.scss";
 
 .container {
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   color: $font-primary;
   min-height: 92vh;
+  width: 100%;
 
   .top {
     display: flex;
@@ -39,35 +39,66 @@
       padding: 20px;
       display: flex;
       flex-direction: column;
-      border-left: #999 2px solid;
       gap: 12px;
 
       p {
         font-size: 20px;
         font-weight: 400;
+
+        @include mobile {
+          font-size: 18px;
+        }
       }
     }
   }
 
   .item {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
     gap: 20px;
-    min-height: 20vh;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
     min-height: 30vh;
 
     .item-detail {
-      text-align: justify;
+      list-style: none;
       padding: 5px;
       font-size: 20px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      a{
+      gap: 8px;
+      width: 100%;
+
+      @include mobile {
+        font-size: 13px;
+      }
+
+      li {
+        padding: 10px;
+        width: 100%;
+        min-height: 60px;
+        text-align: left;
+        font-size: 18px;
+        text-transform: capitalize;
+
+        &:hover {
+          transform: scaleX(0.97);
+          cursor: pointer;
+        }
+
+        @include mobile {
+          font-size: 16px;
+        }
+
+        &:nth-child(even) {
+          background-color: hsla(260, 15%, 12%, 0.322);
+        }
+
+        &:nth-child(odd) {
+          background-color: hsla(260, 15%, 12%, 0.616);
+        }
+      }
+
+      a {
         text-decoration: underline;
         font-style: italic;
       }
@@ -77,6 +108,10 @@
       text-decoration: underline;
       color: #999;
       text-transform: uppercase;
+
+      @include mobile {
+        font-size: 20px;
+      }
     }
   }
 }
