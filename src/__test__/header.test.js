@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
-import Header from '../coponents/header/Header';
+import Header from '../components/header/Header';
 
 const HeaderForTesting = (
   <BrowserRouter>

@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './coponents/header/Header';
+import Header from './components/header/Header';
 import Detail from './pages/Detail/Detail';
 import Home from './pages/Home/Home';
 import './App.scss';
-import Footer from './coponents/footer/Footer';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (

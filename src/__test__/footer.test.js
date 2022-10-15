@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
-import Footer from '../coponents/footer/Footer';
+import Footer from '../components/footer/Footer';
 
 const FooterTesting = (
   <BrowserRouter>
