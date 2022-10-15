@@ -28,37 +28,58 @@ const Detail = () => {
         </div>
         <ul className="item-detail">
           <li>
-            Crypto Rank:
-            {selectedCrypto.rank}
+            <span> Rank:</span>
+            <span>
+              {' '}
+              {selectedCrypto.rank}
+            </span>
           </li>
           <li>
-            Crypto Symbole:
-            {selectedCrypto.symbol}
+            <span>Symbole:</span>
+            <span>
+              {' '}
+              {selectedCrypto.symbol}
+            </span>
           </li>
           <li>
-            Crypto supply:
-            {selectedCrypto.supply}
+            <span> Supply:</span>
+            <span>
+              {' '}
+              {selectedCrypto.supply}
+            </span>
           </li>
 
           <li>
-            Crypto market Cap Usd:
-            {selectedCrypto.marketCapUsd}
+            <span> Market Cap Usd:</span>
+            <span>
+              {' '}
+              {selectedCrypto.marketCapUsd}
+            </span>
           </li>
           <li>
-            Crypto volume Usd 24Hr:
-            {selectedCrypto.volumeUsd24Hr}
+            <span> Volume Usd 24Hr:</span>
+            <span>
+              {' '}
+              {selectedCrypto.volumeUsd24Hr}
+            </span>
           </li>
           <li>
-            Crypto price Usd:
-            {selectedCrypto.priceUsd}
+            <span>Price Usd:</span>
+            <span>
+              {' '}
+              {selectedCrypto.priceUsd}
+            </span>
           </li>
           <li>
-            Crypto change Percent 24Hr:
-            {selectedCrypto.changePercent24Hr}
+            <span> Change Percent 24Hr:</span>
+            <span>
+              {' '}
+              {selectedCrypto.changePercent24Hr}
+            </span>
           </li>
           <li>
-            Crypto vwap 24Hr:
-            {selectedCrypto.vwap24Hr}
+            <span> Vwap 24Hr:</span>
+            <span>{selectedCrypto.vwap24Hr}</span>
           </li>
           <li>
             <a href={selectedCrypto.explorer}>Explorer More</a>
