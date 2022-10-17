@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Live Crypto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Livecrypto is a real-time crypto pricing predication app by fetch data from CoinCap API. Livecrypto provide information to users by collecting exchange data from thousands of markets, Users can access transparent and accurate data on asset price and availability.
+## Built With
+- React 
+- Redux
+- Sass
+- React-bootstrap 
+- JSX
 
-## Available Scripts
+## Live Demo
+[Live Demo](https://clinquant-kringle-c60d03.netlify.app/)
 
-In the project directory, you can run:
+## Screenshot 
+![image](https://user-images.githubusercontent.com/30173722/195955778-bab825c5-0d41-4f50-8628-e9281e508f11.png)
 
-### `npm start`
+## Getting Started
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- You should be having [Node.js](https://nodejs.org/en/) installed on your computer
+### Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get a local copy up and running follow these simple example steps.
 
-### `npm test`
+1. Navigate to a folder where you want the cloned file to appear
+   
+2. Clone this repo in your terminal or git bash using the command
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  `git clone https://github.com/melashu/livecrypto.git`
 
-### `npm run build`
+3. `cd livecrypto`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. run `npm install ` to install all the necessary dependencies including the linters
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Run start 
+- This will run the react app in your browser 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### To Run Test
+- Run `npm run test`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👤 **Melashu Amare**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Github](https://github.com/melashu)
+- [Twitter](https://twitter.com/meshu102)
+- [LinkedIn](https://www.linkedin.com/in/melashu-amare/)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues, and feature requests are welcome!
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Feel free to check the [issues page](https://github.com/melashu/livecrypto/issues).
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a ⭐️ if you like this project!
 
-### Making a Progressive Web App
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- My standup partner 
+- To my reviewer 
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+- [CoinCap API provider](https://docs.coincap.io/#ee30bea9-bb6b-469d-958a-d3e35d442d7a)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,166 @@
+@import "../../common.scss";
+
+.home-container {
+  background-color: $secondaryColor;
+  position: relative;
+  color: $font-primary;
+
+  .top {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 10px;
+    min-height: 20vh;
+    box-shadow: $box-shadow;
+    margin-bottom: 25px;
+
+    .left {
+      flex: 1;
+      justify-self: end;
+
+      img {
+        float: right;
+        width: $img-width;
+        height: $img-height;
+
+        @include mobile {
+          width: 100%;
+          height: 100%;
+          float: none;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      align-self: start;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h2 {
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 400;
+
+        @include mobile {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: $primaryColor;
+
+    .bottom-top {
+      background-color: #35548a;
+      padding: 5px;
+    }
+
+    @include mobile {
+      background-color: $primaryColor;
+    }
+
+    .title {
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      margin: 24px auto;
+      width: 60vw;
+      padding: 10px;
+      border-radius: 50px;
+      background-color: $search-bg;
+
+      @include mobile {
+        width: 40%;
+        padding: 5px;
+        height: 45px;
+      }
+
+      input {
+        padding: 5px;
+        outline: none;
+        border: none;
+        width: 100%;
+        font-size: 25px;
+        font-weight: 400;
+        background-color: transparent;
+      }
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      list-style: none;
+      padding: 5px;
+
+      @include xs {
+        margin: 10px;
+        font-size: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+          display: flex;
+          flex-direction: column-reverse;
+          font-size: 18px;
+          padding: 2px;
+          justify-content: flex-end;
+          align-items: flex-end;
+          row-gap: 44px;
+        }
+
+        @include xs {
+          font-size: 13px;
+          padding: 5px;
+        }
+
+        font-size: 20px;
+        border: 0.5px solid rgba(248, 246, 246, 0.753);
+        padding: 10px;
+        margin: 2px;
+
+        &:hover {
+          transform: scaleX(0.96);
+        }
+
+        .item-container {
+          @include mobile {
+            padding: 6px;
+            text-align: right;
+            margin: 2px;
+          }
+
+          padding: 15px;
+          margin: 5px;
+          text-align: left;
+
+          h4,
+          h3 {
+            color: $font-primary;
+            font-weight: 400;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
