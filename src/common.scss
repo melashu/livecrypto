@@ -1,0 +1,21 @@
+$primaryColor: #4369b2;
+$secondaryColor: #5586e3;
+$font-primary: #fff;
+$box-shadow: 1px 3px 5px #999;
+$color: #0ff;
+$background-color: rgb(226, 240, 240);
+$search-bg: #fff;
+$img-width: 100%;
+$img-height: 300px;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 485px) {
+    @content;
+  }
+}
